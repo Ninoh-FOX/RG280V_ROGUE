@@ -27,19 +27,19 @@ if you have debian 9, just download the binarion package at:
 
 https://github.com/Ninoh-FOX/toolchain/releases
 
-and extract this in / opt / gcw0-toolchain
+and extract this in /opt/gcw0-toolchain
 
 If you have a different Linux distribution, run the rebuild.sh script that is inside the toolchain folder to create the correct / opt / gcw0-toolchain for your system.
 
 Once all this is configured, the steps to compile the system are:
 
-: ~ / toolchain $ make rg280v_defconfig
-: ~ / toolchain $ make -f Makefile.rg280v -j4
+: ~/toolchain $ make rg280v_defconfig
+: ~/toolchain $ make -f Makefile.rg280v -j4
 
 When the whole process is finished you can create the installation packages or the sd_imagen.bin with the following commands:
 
-: ~ / toolchain / updaters $ ./create_kernel_v.sh (this creates a kernel update package)
+: ~/toolchain/updaters $ ./create_kernel_v.sh (this creates a kernel update package)
 
-: ~ / toolchain / updaters $ ./create_updater_v.sh (this creates a complete system update package)
+: ~/toolchain/updaters $ ./create_updater_v.sh (this creates a complete system update package)
 
-: ~ / toolchain / updaters / imager_v $ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
+: ~/toolchain/updaters/imager_v $ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
